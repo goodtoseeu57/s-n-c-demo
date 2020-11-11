@@ -5,7 +5,7 @@ import { SeePostsComponent } from "./components/see-posts/see-posts.component";
 
 const routes: Routes = [
   { path: "make-a-post", component: MakeAPostComponent },
-      { path: "see-posts", component: SeePostsComponent }
+  { path: "see-posts", component: SeePostsComponent }
 ];
 
 @NgModule({
