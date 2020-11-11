@@ -1,0 +1,59 @@
+<div class="content">
+  <ckeditor [(ngModel)]="editorData" [editor]="Editor"></ckeditor>
+</div>
+
+<div class="content">
+  <div class="card-container">
+    <div class="card card-small" tabindex="0" (click)="goToPosts()">
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+      </svg>
+      <span>See Posts</span>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <div class="card card-small" tabindex="0" (click)="savePost()">
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+      </svg>
+      <span>Save Post</span>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="card-container">
+    <div class="card card-small" tabindex="0" (click)="showGithubMarkdown()">
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+      </svg>
+      <span>
+        {{ markDown ? "show less" : "show github markdown option" }}
+      </span>
+    </div>
+  </div>
+</div>
+
+<ng-container *ngIf="markDown">
+  <div class="content">
+    <markdown-toolbar for="textarea_id">
+      <md-bold>
+        <button>Bold</button>
+      </md-bold>
+      <md-header>header</md-header>
+      <md-quote>quote</md-quote>
+      <md-link>link</md-link>
+      <md-image>image</md-image>
+      <md-unordered-list>unordered-list</md-unordered-list>
+      <md-ordered-list>ordered-list</md-ordered-list>
+      <md-task-list>task-list</md-task-list>
+      <md-mention>mention</md-mention>
+      <md-ref>ref</md-ref>
+    </markdown-toolbar>
+    <textarea [(ngModel)]="markdownData" id="textarea_id" (ngModelChange)="changed($event)"></textarea>
+  </div>
+  <div class="content">
+    <div [innerHtml]="htmlFromMarkDown"></div>
+  </div>
+</ng-container>

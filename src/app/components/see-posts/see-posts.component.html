@@ -1,0 +1,24 @@
+<div class="content">
+  <div class="card-container">
+    <div class="card card-small" tabindex="0">
+      <span>Posts</span>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div *ngFor="let post of posts">
+    <div [innerHTML]="post">
+      <p>
+        <ng-container>dsdsaaddsadasdas</ng-container>
+        <ckeditor
+          [config]="editorConfiguration.plugins"
+          [disabled]="!editEnabled"
+          [(ngModel)]="editedObject.data.keyPoints"
+          [editor]="Editor"
+          class="sdasdasdasdasdasdasdasdasdasdasdasdasdasdasdsadsadsadasdasdasdassaasdasdsa"
+        ></ckeditor>
+      </p>
+    </div>
+  </div>
+</div>
