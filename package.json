@@ -13,7 +13,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged --pattern '**/*.ts' "
+      "pre-commit": "(pretty-quick --staged --pattern '**/*.ts') & js-beautify 'src/**/*.html' "
     }
   },
   "private": true,
