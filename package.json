@@ -13,7 +13,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick  --staged --ignore-path='src/.prettierignore' "
+      "pre-commit": "pretty-quick --staged --pattern '**/*.ts' "
     }
   },
   "private": true,
