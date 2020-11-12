@@ -8,12 +8,12 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "format": "(prettier --write 'src/**/*.{ts,scss}' ",
+    "format": "(prettier --write 'src/**/*.{ts,scss}') & js-beautify 'src/**/*.html'",
     "format-html": "js-beautify 'src/**/*.html'"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "(pretty-quick --staged) & js-beautify 'src/**/*.html'"
     }
   },
   "private": true,
