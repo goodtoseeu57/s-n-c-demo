@@ -11,7 +11,13 @@
     <div [innerHTML]="post">
       <p>
         <ng-container>dsdsaaddsadasdas</ng-container>
-        <ckeditor [config]="editorConfiguration.plugins" [disabled]="!editEnabled" [(ngModel)]="editedObject.data.keyPoints" [editor]="Editor" class="dasdasdasdasdasdasdasdsadsadsadasdasdasdassaasdasdsa"></ckeditor>
+        <ckeditor
+          [config]="editorConfiguration.plugins"
+          [disabled]="!editEnabled"
+          [(ngModel)]="editedObject.data.keyPoints"
+          [editor]="Editor"
+          class="dasdasdasdasdasdasdasdsadsadsadasdasdasdassaasdasdsa"
+        ></ckeditor>
       </p>
     </div>
   </div>
